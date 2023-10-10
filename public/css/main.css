@@ -1,0 +1,423 @@
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 300;
+  src: url('../fonts/Barlow-Light.woff2') format('woff2'),
+    url('../fonts/Barlow-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 600;
+  src: url('../fonts/Barlow-SemiBold.woff2') format('woff2'),
+    url('../fonts/Barlow-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-weight: 700;
+  src: url('../fonts/Fraunces9ptSoft-Bold.woff2') format('woff2'),
+    url('../fonts/Fraunces9ptSoft-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-weight: 900;
+  src: url('../fonts/Fraunces9ptSoft-Black.woff2') format('woff2'),
+    url('../fonts/Fraunces9ptSoft-Black.woff') format('woff');
+}
+
+/* FONT FACE END */
+
+:root {
+  --ff-main: 'Barlow', sans-serif;
+  --ff-secondary: 'Fraunces', sans-serif;
+
+  --fw-100: 300;
+  --fw-200: 600;
+  --fw-300: 700;
+  --fw-400: 900;
+
+  --clr-primary-100: #fe7867;
+  --clr-primary-200: #fad400;
+  --clr-primary-300: #25564b;
+  --clr-primary-400: #19536b;
+  --clr-primary-500: #458c7e;
+
+  --clr-neutral-100: #23303e;
+  --clr-neutral-200: #5a636c;
+  --clr-neutral-300: #818498;
+  --clr-neutral-400: #a7abae;
+  --clr-neutral-500: #fff;
+}
+
+/* ROOT END */
+
+/***
+    The new CSS reset - version 1.11 (last updated 20.9.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+li {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* RESET CSS END */
+
+body {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.heading-1 {
+  font-family: var(--ff-secondary);
+  font-size: 56px;
+  letter-spacing: 8.75px;
+  font-weight: 900;
+
+  line-height: 60px;
+  color: var(--clr-primary-400);
+}
+
+.heading-2 {
+  font-family: var(--ff-secondary);
+  font-size: 40px;
+  letter-spacing: -0.29px;
+  font-weight: 900;
+
+  line-height: 60px;
+  color: var(--clr-primary-400);
+}
+
+.btn {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.underline-1 {
+  width: 137px;
+  height: 10px;
+
+  background-color: #fad400;
+}
+
+/* GENERIC CSS END */
+
+header {
+  background-image: url('../images/desktop/image-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 800px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1352px;
+  margin-inline: auto;
+
+  padding: 2rem 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 18px;
+
+  line-height: 25px;
+  letter-spacing: -0.13px;
+
+  padding: 0 22px;
+  color: #fff;
+}
+
+.nav-btn {
+  background-color: #fff;
+  color: #24303e;
+
+  padding: 14px 34px;
+  border-radius: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.11px;
+  font-weight: bold;
+}
+
+.header-container {
+  width: 850px;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 5rem;
+}
+
+.header-container .heading-1 {
+  color: #fff;
+
+  text-transform: uppercase;
+}
+
+.header-img {
+  padding-top: 7rem;
+}
+
+/* Header CSS END */
+
+.transform-section,
+.audience-section,
+.design-section {
+  height: 600px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 720px);
+}
+
+.transform-section_left,
+.audience-section_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transform-section_right {
+  height: 600px;
+
+  grid-column: 2 / 3;
+}
+
+.copy-content {
+  width: 445px;
+}
+
+.copy-content p {
+  font-size: 18px;
+  font-family: var(--ff-main);
+  font-weight: 500;
+
+  letter-spacing: -0.13px;
+  line-height: 30px;
+
+  padding: 19px 0;
+
+  color: var(--clr-neutral-300);
+}
+
+.audience-section_right {
+  grid-column: 2 / 3;
+}
+
+.design {
+  background-image: url('../images/desktop/image-graphic-design.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.photography {
+  background-image: url('../images/desktop/image-photography.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.testimonial-section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 600px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 1110px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.four-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 360px);
+}
+
+.column-1 {
+  background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+  background-position: center;
+  background-size: cover;
+
+  width: 360px;
+  height: 447px;
+}
+
+.column-2 {
+  background-image: url('../images/desktop/image-gallery-orange.jpg');
+  background-position: center;
+  background-size: cover;
+
+  width: 360px;
+  height: 447px;
+}
+
+.column-3 {
+  background-image: url('../images/desktop/image-gallery-cone.jpg');
+  background-position: center;
+  background-size: cover;
+
+  width: 360px;
+  height: 447px;
+}
+
+.column-4 {
+  background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+  background-position: center;
+  background-size: cover;
+
+  width: 360px;
+  height: 447px;
+}
+
+.footer-container {
+  height: 350px;
+
+  background-color: #90d4c6;
+}
