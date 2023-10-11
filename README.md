@@ -40,7 +40,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -50,18 +49,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- Custom JavaScript
 
 ### Continued development
 
 I want to increase my knowledge on JS and how fetch works in case - I find another project which has a fetch element.
-
-### Useful resources
-
-- [Github Fetch 1](https://www.pluralsight.com/guides/using-fetch-with-github-api-v3) - This helped me for getting started with fetch and using it to get Github users info.
-- [Github Fetch 2](https://dev.to/technicalvandar885/github-profile-data-fetch-using-github-user-api-512i) - This helped me for getting started with fetch and using it to get Github users info.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 

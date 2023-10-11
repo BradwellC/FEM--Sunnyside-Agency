@@ -342,6 +342,41 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: end;
+  align-items: center;
+}
+
+.design-content,
+.photography-content {
+  width: 339px;
+
+  text-align: center;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 27px;
+}
+
+.design-content h3 {
+  color: var(--clr-primary-300);
+  font-family: var(--ff-secondary);
+
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+.design-content p {
+  color: var(--clr-primary-500);
+
+  font-family: var(--ff-main);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .photography {
@@ -349,7 +384,31 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: end;
+  align-items: center;
 }
+
+.photography-content h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-secondary);
+
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+.photography-content p {
+  color: var(--clr-primary-400);
+
+  font-family: var(--ff-main);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Two Column CSS END */
 
 .testimonial-section {
   display: flex;
@@ -361,11 +420,23 @@ header {
   height: 600px;
 }
 
+.testimonial-section h2 {
+  font-size: 20px;
+  font-family: var(--ff-secondary);
+
+  letter-spacing: 5px;
+
+  color: var(--clr-neutral-400);
+}
+
 .testimonial-container {
   display: flex;
   flex-direction: row;
 
   width: 1110px;
+
+  padding-top: 4rem;
+  column-gap: 25px;
 }
 
 .testimonial {
@@ -373,7 +444,53 @@ header {
   flex-direction: column;
 
   align-items: center;
+
+  text-align: center;
+
+  width: 350px;
 }
+
+.testimonial img {
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+}
+
+.testimonial-copy {
+  margin: 20px 0;
+
+  font-family: var(--ff-main);
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.13px;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 9px;
+}
+
+.testimonial-author h5 {
+  font-family: var(--ff-secondary);
+  font-size: 18px;
+
+  color: var(--clr-neutral-100);
+}
+
+.testimonial-author span {
+  font-family: var(--ff-main);
+  line-height: 25px;
+
+  font-size: 14px;
+  letter-spacing: -0.1px;
+
+  color: var(--clr-neutral-400);
+}
+
+/* Testimonial CSS END */
 
 .four-columns {
   display: grid;
@@ -384,6 +501,7 @@ header {
   background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
   background-position: center;
   background-size: cover;
+  object-fit: cover;
 
   width: 360px;
   height: 447px;
@@ -416,8 +534,53 @@ header {
   height: 447px;
 }
 
+/* Four Column CSS END */
+
 .footer-container {
   height: 350px;
 
   background-color: #90d4c6;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container img {
+  filter: invert(39%) sepia(45%) saturate(433%) hue-rotate(118deg)
+    brightness(92%) contrast(101%);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  width: 297px;
+
+  padding: 35px 0 70px;
+}
+
+.footer-nav .nav-link {
+  color: var(--clr-primary-500);
+}
+
+.footer-nav .nav-link:hover {
+  color: #fff;
+}
+
+.social-footer {
+  width: 164px;
+
+  display: flex;
+  justify-content: space-around;
+
+  cursor: pointer;
+}
+
+.social-footer img:hover {
+  filter: invert(95%) sepia(95%) saturate(0%) hue-rotate(193deg)
+    brightness(100%) contrast(100%);
 }
